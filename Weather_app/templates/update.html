@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>WEATHER</title>
+
+</head>
+
+
+<body bgcolor='pink'>
+
+
+{% block content %}
+
+<center>
+<h1> {{info1.city_name}} Weather</h1>
+
+
+{% if info1 %}
+        <div class="card  mt-5">
+            <div class="card-body  m-2">
+                <h3><strong>  {{ info1.weather }}  </strong></h3>
+            </div>
+        </div>
+        <div class="card  mt-5">
+            <div class="card-body  m-2">
+              <b><label for="temp">Temperature  </label></b>
+              Currently <h1>  <strong>{{ info1.temp }}&deg; C </strong> </h1>
+            </div>
+        </div>
+        <div class="card  mt-5">
+            <div class="card-body  m-2">
+              <b><label for="humidity">Humidity : </label></b>
+                <strong>{{ info1.humidity }} % </strong>
+            </div>
+        </div>
+        <div class="card  mt-5">
+            <div class="card-body  m-2">
+              <b><label for="wind_speed">Wind speed : </label></b>
+                <strong>{{ info1.wind_speed }} km/hr </strong>
+            </div>
+        </div>
+        <div class="card  mt-5">
+            <div class="card-body  m-2">
+              <b><label for="clouds">Clouds : </label>   </b>
+                <strong>{{ info1.Clouds }} % </strong>
+            </div>
+        </div>
+        <div class="card  mt-5">
+            <div class="card-body  m-2">
+              <b><label for="pressure">Pressure : </label> </b>
+                <strong>{{ info1.pressure }} mb </strong>
+            </div>
+        </div>
+        <div class="card  mt-5">
+            <div class="card-body  m-2">
+              <b><label for="latitude">Latitude : </label> </b>
+                <strong>{{ info1.Latitude }}  </strong>
+            </div>
+        </div>
+        <div class="card  mt-5">
+            <div class="card-body  m-2">
+              <b><label for="longitude">Longitude : </label></b>
+                <strong>{{ info1.Longitude }} </strong>
+            </div>
+        </div>
+        
+
+ {% endif %}
+
+</center>
+{% endblock %}
+</body>
+</html>
+
