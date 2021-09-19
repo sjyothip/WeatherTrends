@@ -27,6 +27,6 @@ def test(request):
     return render(request, 'update.html', context={'info1':test}) 
 
 @csrf_exempt
-def multi(request):
+def index(request):
     return render(request, 'weather.html')
 

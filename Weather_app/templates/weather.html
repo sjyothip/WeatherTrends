@@ -7,7 +7,7 @@
 
 
 <body bgcolor='pink'>
-
+<center><h2>
 {% block content %}
   <form method="post" enctype="multipart/form-data" action='/weather/test'>
 
@@ -26,13 +26,14 @@
       <option value="Punjab">Punjab</option>
       <option value="Haryana">Haryana</option>
       <option value="Jammu & Kashmir">Jammu & Kashmir</option>
-    </select>
+    </select> <br/><br/>
 
     <button type="submit">Submit</button>
   </form>
 
 
 {% endblock %}
+</h2></center>
 </body>
 </html>
 
