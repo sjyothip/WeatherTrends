@@ -1,20 +1,14 @@
-{% load static %}
+{% extends 'weather.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>WEATHER</title>
-
 </head>
-
-
 <body bgcolor='pink'>
 
-
 {% block content %}
-
 <center>
 <h1> {{info1.city_name}} Weather</h1>
-
 
 {% if info1 %}
        
@@ -30,7 +24,7 @@
             </div>
         </div>
         <center>
-        <table width="30%" border="0" cell-padding="50"><tr><td>
+        <table width="50%" border="0"><tr><td>
             <center>
         <div class="card  mt-5">
             <div class="card-body  m-2">
@@ -49,15 +43,16 @@
               <b><label for="clouds">Clouds : </label>   </b>
                 <strong>{{ info1.Clouds }} % </strong>
             </div>
-        </div></center>
-        </td>
-        <td><center>
+        </div>
         <div class="card  mt-5">
             <div class="card-body  m-2">
               <b><label for="pressure">Pressure : </label> </b>
                 <strong>{{ info1.pressure }} mb </strong>
             </div>
         </div>
+        </td></center>
+        <td><center>
+        
         <div class="card  mt-5">
             <div class="card-body  m-2">
               <b><label for="latitude">Latitude : </label> </b>
@@ -70,10 +65,23 @@
                 <strong>{{ info1.Longitude }} </strong>
             </div>
         </div>
-        </td></center></tr></table>
-
- {% endif %}
-
+        <div class="card  mt-5">
+            <div class="card-body  m-2">
+              <b><label for="sunrise">Sunrise : </label></b>
+                <strong>{{ info1.sunrise }} </strong>
+            </div>
+        </div>
+        <div class="card  mt-5">
+            <div class="card-body  m-2">
+              <b><label for="sunset">Sunset : </label></b>
+                <strong>{{ info1.sunset }} </strong>
+            </div>
+        </div>
+        </center>
+        </td></tr></table>
+{% endif %}
+<br/><br/><br/><br/><br/><br/>
+  <b><a href="/weather/index">BACK</a></b>
 </center>
 {% endblock %}
 </body>
